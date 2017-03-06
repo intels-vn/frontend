@@ -1,0 +1,86 @@
+<div class="videoCtrl">
+    <div class="container body">
+        <div class="main_container">
+            <ng-include src="'Template/include/top-nav.html'"></ng-include>
+            <ng-include src="'Template/include/main-nav.html'"></ng-include>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="right_col" role="main">
+                    <h1 align="center" translate="HomeMess"></h1>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h1 align="center">Match 1</h1>
+                        <div>
+                            <div id="cctv-container">
+                              <object classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" codebase="https://download.videolan.org/pub/videolan/vlc/0.8.4a/win32/axvlc.cab" id="vlc" events="True" width="600" height="360">
+                                <param name="Src" />
+                                <param name="ShowDisplay" value="True"/>
+                                <param name="AutoLoop" value="False"/>
+                                <param name="AutoPlay" value="True"/>
+                                <embed id="vlcEmb" type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" target="rtp://230.0.0.1:5558" width="600" height="360"/>
+                              </object>
+                            </div>
+                            <div>
+                                <p><b>Channel</b>
+                                    <button type="button" class="btn btn-primary" translate="1"></button>
+                                    <button type="button" class="btn btn-primary" translate="2"></button>
+                                    <button type="button" class="btn btn-primary" translate="3"></button>
+                                    <button type="button" class="btn btn-primary" translate="4"></button>
+                                </p>
+                            </div>
+                            <div>
+                                <h5>Bet</h5>
+                                <button type="button" class="btn btn-primary" translate="1"></button>
+                                <button type="button" class="btn btn-primary" translate="2"></button>
+                                <button type="button" class="btn btn-primary" translate="3"></button>
+                                <button type="button" class="btn btn-primary" translate="4"></button>
+                            </div>
+                       </div>
+                   </div>	
+                   
+                   <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h1 align="center">Match 2</h1>
+                        <div>
+                            <div id="cctv-container">
+                              <object classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" width="600" height="360" id="vlc" events="True">
+                                  <param name="MRL" value="" />
+                                  <param name="ShowDisplay" value="True" />
+                                  <param name="AutoLoop" value="False" />
+                                  <param name="AutoPlay" value="True" />
+                                  <param name="Volume" value="50" />
+                                  <param name="toolbar" value="true" />
+                                  <param name="StartTime" value="0" />
+                                  <EMBED pluginspage="http://www.videolan.org"
+                                        type="application/x-vlc-plugin"
+                                        version="VideoLAN.VLCPlugin.2"
+                                        width="600"
+                                        height="360"
+                                        toolbar="true"
+                                        loop="false"
+                                        text="Waiting for video"
+                                        target="rtp://230.0.0.1:5558"
+                                        name="vlc">
+                                  </EMBED>
+                              </object>
+                            </div>
+                            <div>
+                                <p><b>Channel: </b>
+                                    <button type="button" class="btn btn-primary" translate="1"></button>
+                                    <button type="button" class="btn btn-primary" translate="2"></button>
+                                    <button type="button" class="btn btn-primary" translate="3"></button>
+                                    <button type="button" class="btn btn-primary" translate="4"></button>
+                                </p>
+                            </div>
+                            <div>
+                                <h5>Bet</h5>
+                                <button type="button" class="btn btn-primary" translate="1"></button>
+                                <button type="button" class="btn btn-primary" translate="2"></button>
+                                <button type="button" class="btn btn-primary" translate="3"></button>
+                                <button type="button" class="btn btn-primary" translate="4"></button>
+                            </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <ng-include src="'Template/include/footer.html'"></ng-include>
+        </div>
+    </div>
+</div>

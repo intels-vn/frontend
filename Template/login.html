@@ -1,0 +1,48 @@
+<div ng-controller="loginCtrl">
+  <a class="hiddenanchor" id="signup"></a>
+  <a class="hiddenanchor" id="signin"></a>
+  <div class="login_wrapper">
+    <div class="animate form login_form" >
+      <section class="login_content">
+        <form>
+          <h1 translate="Login"></h1>
+          <div>
+          	<label ng-model="errorMessage" class="text-danger">{{errorMessage}}</label>
+          </div>
+          <div>
+            <input type="text" class="form-control" placeholder="Username" ng-model="username"/>
+          </div>
+          <div>
+            <input type="password" class="form-control" placeholder="Password" ng-model="password"/>
+          </div>
+          <div>
+            <div align="center" class="g-recaptcha" data-sitekey="6LcSixIUAAAAAL4Aa6Sx7xAMYYuaUiJ-9sNyZ3Tn" data-callback="successCaptcha"></div>
+            <button id="logBtn" type="button" class="btn btn-default" ng-click="login()" ><span translate="Login"></span></button>
+          </div><br/>
+          <div align="left">
+          	<h5 style="color:#FFF" translate="MessageAcc"></h5><a href="#/register"><button type="button" class="btn btn-danger"><span translate="Signup"></span></button></a>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="separator">
+            <div class="clearfix"></div>
+            <br />
+            <div>
+              <h1><i class="fa fa-paw"></i> Demo Week 3</h1>
+            </div>
+          </div>
+        </form>
+      </section>
+      <div align="right" ng-controller="languageCtrl">
+          <button type="button" class="btn btn-info active" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button>
+          <button type="button" class="btn btn-info active" ng-click="changeLanguage('vi')" translate="BUTTON_LANG_VI"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	function successCaptcha(){
+		document.getElementById("logBtn").disabled = false;
+	}
+</script>

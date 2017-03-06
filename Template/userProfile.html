@@ -1,0 +1,100 @@
+<div ng-controller="userProfileCtrl">    
+    <div class="container body">
+        <div class="main_container">
+            <ng-include src="'Template/include/main-nav.html'"></ng-include>
+            <ng-include src="'Template/include/top-nav.html'"></ng-include>
+            
+            <div class="right_col" role="main">
+               <div class="container">
+                    <div class="col-xs-12">
+                        <div class="x_panel">
+                         <div class="x_content">
+                            <h1 align="center" translate="Profile"></h1>
+                            <br />
+                            <form class="form-horizontal form-label-left" name="myForm">
+    
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" translate="Username"></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  <input type="text" name="username" ng-model="username" class="form-control" placeholder="Username" disabled="disabled" />
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" translate="Pass"></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  <input type="password" name="password" ng-model="password" class="form-control" placeholder="Password" />
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" translate="Firstname"></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  <input type="text" name="firstname" ng-model="firstname" class="form-control" placeholder="Firstname" disabled="disabled" />
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" translate="Lastname"></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  <input type="text" name="lastname" ng-model="lastname" class="form-control" placeholder="Lastname" disabled="disabled" />
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" translate="Phone"></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  <input type="text" name="phone" ng-model="phone" class="form-control" placeholder="Phone" />
+                                </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" translate="Email"></label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  <input type="email" name="email" ng-model="email" class="form-control" placeholder="Email" />
+                                </div>
+                              </div>
+                              
+                              <div class="ln_solid"></div>
+                              
+                              <div class="form-group">
+                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                                  <button type="submit" class="btn btn-success" ng-click="edit()" data-toggle="modal" data-target="#myModal" translate="Edit"></button>
+                                </div> 
+                              </div>
+                              
+                            </form>
+                        </div>
+                          <!-- Modal -->
+                          <div id="myModal" class="modal fade" role="dialog">
+                             <div class="modal-dialog">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    
+                                    <h1 align="center" class="modal-title" translate="EditProfile"></h1>
+                                  </div>
+                                  
+                                  <div class="modal-body">
+                                    <h3 align="center" translate="WarningMess"></h3>  
+                                  </div>
+                                  
+                                  <div class="modal-footer" style="text-align:center">
+                                    <button type="submit" class="btn btn-default" data-dismiss="modal" ng-click="saves()" translate="Yes"></button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" translate="Cancel"></button>
+                                  </div>
+                                  
+                                </div>
+                             </div>
+                          </div>
+                          <!-- Modal -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+            <ng-include src="'Template/include/footer.html'"></ng-include>
+        </div>
+    </div>
+</div>

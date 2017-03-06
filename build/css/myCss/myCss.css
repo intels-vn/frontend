@@ -1,0 +1,8 @@
+tbody tr td a:hover{
+	cursor:pointer;
+}
+
+input.ng-invalid {
+    background-color: lightblue;
+}
+
